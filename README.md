@@ -9,6 +9,15 @@ Ett enkelt Python-projekt som hämtar franska meningar från ett API, sparar til
 - Webbsida med Flask som visar innehållet
 - Kod uppdelad i moduler (`api.py`, `models.py`, `views.py`)
 - Valfritt: använd Docker för att köra databasen
+```mermaid
+flowchart TD
+    A[Start: Flask App startas] --> B[Läs data från API]
+    B --> C[Spara data i SQLite med SQLAlchemy]
+    C --> D1[Visa data på webbsida med Flask]
+    C --> D2[Exportera till Excel med Pandas]
+    D1 --> E1[Användare ser franska ord i webbläsaren]
+    D2 --> E2[Excel-fil sparas som french_words.xlsx]
+```
 
 ## 🧰 Installation
 
