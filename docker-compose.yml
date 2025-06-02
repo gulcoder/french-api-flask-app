@@ -1,0 +1,16 @@
+
+
+services:
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_USER: minduser
+      POSTGRES_PASSWORD: mindpass
+      POSTGRES_DB: mindfulnessdb
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:

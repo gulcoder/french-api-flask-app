@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8" />
+    <title>Mindfulness-citat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+</head>
+<body>
+    <div class="container">
+        <h1>Mindfulness-citat</h1>
+
+        <blockquote id="quote-block">
+            {% if quote %}
+                <p id="quote-text">"{{ quote.text }}"</p>
+                <footer id="quote-author">- {{ quote.author }}</footer>
+            {% else %}
+                <p id="quote-text">Inget citat hittades.</p>
+            {% endif %}
+        </blockquote>
+
+        <button id="new-quote-btn">Hämta nytt citat</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
